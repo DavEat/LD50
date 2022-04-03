@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class SwitchBody : MonoBehaviour
 {
+
+
     [SerializeField] AnimationManager m_animManager;
     [SerializeField] Animator m_hunter;
     [SerializeField] Animator m_troll;
 
     [SerializeField] bool debug;
+
+    [SerializeField] AudioSource m_source;
+    [SerializeField] AudioClip[] m_clips;
 
     public void Switch(bool troll)
     {
@@ -24,6 +29,8 @@ public class SwitchBody : MonoBehaviour
             m_animManager.SetAnimator(m_hunter);
             m_troll.gameObject.SetActive(false);
         }
+
+        SoundManager.PlaySound(m_source, m_clips, true);
     }
 
     private void Update()

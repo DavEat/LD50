@@ -44,3 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5af6b3db0c8dc344b7b6bef1f294322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  projectileContainer: {fileID: 0}
+  boarKilled: 1
+  killedByGnome: 0
+  witchKilled: 0
+  PlayerTag: Player
+  MeleeAttackButton_Strike: Fire1
+  MeleeAttackButton_Turn: Fire2
+  NextDialogButton: Fire1
+  numverOfScene: 3
+  m_gameOver: {fileID: 0}

@@ -38,6 +38,8 @@ public class GameManager : Singleton<GameManager>
 
     public void Check_GoToNextScene()
     {
+        DialogsManager.inst.m_inDialog = true;
+
         int index = SceneManager.GetActiveScene().buildIndex + 1;
         if (index >= numverOfScene)
             index = 0;

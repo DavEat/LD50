@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8344659b0a471478162f3beff77dac, type: 3}
+  m_Name: Dialogs_Lv2
+  m_EditorClassIdentifier: 
+  mDialogs:
+  - id: hunter_Lv1_intro_a
+    text: "What... Again... No...\nMy body is changing...\t"
+  - id: hunter_Lv1_intro_b
+    text: 'I don''t know why but,
+
+      I need to return in the wood...'
+  - id: hunter_Lv1_intro_c
+    text: 'Here I''m... and gnomes too
+
+      I need to go deeper'
+  - id: hunter_Lv1_intro_d
+    text: 'And those gnomes better
+
+      not be in my way'
+  - id: hunter_Lv1_witchkilled_a
+    text: 'human again, I hope
+
+      it''s the last time'
+  - id: hunter_Lv1_witchkilled_b
+    text: It's time to go home

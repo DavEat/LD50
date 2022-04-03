@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8344659b0a471478162f3beff77dac, type: 3}
+  m_Name: Dialogs_Lv1
+  m_EditorClassIdentifier: 
+  mDialogs:
+  - id: hunter_Lv1_intro_a
+    text: "What...\nMy body, it's changing...\t"
+  - id: hunter_Lv1_intro_b
+    text: 'It''s not good it''s not corresponding to
+
+      how I see myself'
+  - id: hunter_Lv1_intro_c
+    text: I need to return in the wood...
+  - id: hunter_Lv1_intro_d
+    text: 'Here I''m...
+
+      But what can I do ?'
+  - id: hunter_Lv1_intro_e
+    text: 'Last time out of rage I kill
+
+      something... or someone'
+  - id: hunter_Lv1_intro_f
+    text: 'euh ! what is it... I smell something
+
+      teasty... deeper in the forest'
+  - id: hunter_Lv1_witchkilled_a
+    text: 'euh oook.. killing that person
+
+      give me my humanity back'
+  - id: hunter_Lv1_witchkilled_b
+    text: 'I hope I won''t have to do that often
+
+      Those gnomes are the worst'
+  - id: hunter_Lv1_witchkilled_c
+    text: It's time to go home

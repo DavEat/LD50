@@ -10,9 +10,13 @@ public class EnemyMovement : Enemy
     [Range(-1, 50)]
     [SerializeField] float m_maxRange = 1;
 
+    [Range(-1, 50)]
+    [SerializeField] float m_detectionRange = 10;
+
     Vector3 m_lastTargetPos;
 
     NavMeshAgent m_agent;
+
 
     void Start()
     {
@@ -27,7 +31,11 @@ public class EnemyMovement : Enemy
             return;
 
         if (DialogsManager.inst.InDialog)
+        {
+            m_agent.isStopped = true;
             return;
+        }
+        else m_agent.isStopped = false;
 
         if (!m_states.canMove)
             return;
@@ -36,6 +44,15 @@ public class EnemyMovement : Enemy
         Vector3 direction = m_transform.position - playerPos;
 
         float sqr = direction.sqrMagnitude;
+
+        if (!m_states.mTargetDetected)
+        {
+            if (sqr < m_detectionRange * m_detectionRange)
+            {
+                m_states.mTargetDetected = true;
+            }
+            else return;
+        }
 
         Vector3 targetPos;
         if (sqr > m_maxRange * m_maxRange)

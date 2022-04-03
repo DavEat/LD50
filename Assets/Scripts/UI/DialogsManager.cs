@@ -16,15 +16,9 @@ public class DialogsManager : Singleton<DialogsManager>
     int m_dialogIndex;
 
     public bool InDialog => m_inDialog;
-    bool m_inDialog;
+    public bool m_inDialog;
 
-    public void StartDialog()
-    {
-        m_inDialog = true;
-        NextDialog();
-    }
-
-    void Start()
+    void Awake()
     {
         if (m_startWithDialog)
         {
@@ -40,13 +34,24 @@ public class DialogsManager : Singleton<DialogsManager>
             if (m_inDialog)
                 NextDialog();
             else m_previousQueue = null;
+
+            SoundManager.inst.DialogSound();
         }
+    }
+
+    public void StartDialog()
+    {
+        m_inDialog = true;
+        NextDialog();
     }
 
     void NextDialog()
     {
-        if (m_dialogs != null && m_dialogIndex < m_dialogs.mDialogs.Length)
+        if (m_dialogs != null)
         {
+            if (m_dialogIndex >= m_dialogs.mDialogs.Length)
+                m_dialogIndex = 0;
+
             m_previousQueue = m_queues[m_dialogIndex];
 
             DialogBox.inst.SetText(m_previousQueue.mSpeaker, m_offset, m_dialogs.GetText(m_previousQueue.mDialogIndex), m_previousQueue.italic);
@@ -54,10 +59,10 @@ public class DialogsManager : Singleton<DialogsManager>
 
             DialogBox.inst.gameObject.SetActive(true);
         }
-        else
-        {
-            StopDialog();
-        }
+        //else
+        //{
+        //    StopDialog();
+        //}
     }
 
     public void StopDialog()

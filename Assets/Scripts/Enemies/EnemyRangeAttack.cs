@@ -35,19 +35,21 @@ public class EnemyRangeAttack : Enemy
         if (m_states.moving)
             return;
 
-
+        if (!m_states.mTargetDetected)
+            return;
 
         if (m_coolDown < Time.time)
         {
             if (m_spear == null)
                 SpawnSpear();
+            else
+            {
+                m_states.canShot = RotateToAttack();
 
-            m_states.canShot = RotateToAttack();
-
-            if (!m_states.canShot)
-                return;
-
-            else ShootSpear();
+                if (!m_states.canShot)
+                    return;
+                else ShootSpear();
+            }
         }
     }
 

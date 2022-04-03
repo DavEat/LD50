@@ -15,6 +15,10 @@ public class LifePoints : MonoBehaviour
 
     [SerializeField] protected UnityEvent m_dieEvent;
 
+    [SerializeField] AudioSource m_source;
+    [SerializeField] AudioClip[] m_clips_hurt;
+    [SerializeField] AudioClip[] m_clips_die;
+
     void Start()
     {
         m_lifePoints = m_maxLifePoints;
@@ -57,7 +61,9 @@ public class LifePoints : MonoBehaviour
         if (m_lifePoints <= 0)
         {
             Die();
+            SoundManager.PlaySound(m_source, m_clips_die, true);
         }
+        else SoundManager.PlaySound(m_source, m_clips_hurt, false);
     }
 
     void SetHurtShader(bool hurt)

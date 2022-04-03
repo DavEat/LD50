@@ -44,6 +44,9 @@ public class EnemyStates : MonoBehaviour
     }
     [SerializeField] bool _canShot = false;
 
+
+    public bool mTargetDetected = false;
+
     [Space(10)]
     [Header("Models states")]
 

@@ -37,6 +37,9 @@ public class EnemyMeleeAttack : Enemy
         if (m_states.moving)
             return;
 
+        if (!m_states.mTargetDetected)
+            return;
+
         if (!RotateToAttack())
             return;
 
