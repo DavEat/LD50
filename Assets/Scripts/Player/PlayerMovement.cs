@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Transform m_transform;
     Rigidbody m_rigidbody;
     
-    void Start()
+    void Awake()
     {
         m_transform = GetComponent<Transform>();
         m_rigidbody = GetComponent<Rigidbody>();
@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogsManager.inst.InDialog)
+            return;
+
         if (Mathf.Abs(inputX) > .1f || Mathf.Abs(inputZ) > .1f)
         {
             Vector3 direction = Quaternion.Euler(0, 45, 0) * new Vector3(inputX, 0, inputZ).normalized;

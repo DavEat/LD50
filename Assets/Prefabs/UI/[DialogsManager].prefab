@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4204043360094703260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4862002084390719859}
+  - component: {fileID: 1075563075252676998}
+  m_Layer: 0
+  m_Name: '[DialogsManager]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4862002084390719859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204043360094703260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1075563075252676998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204043360094703260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde80e4357ec22d42a80a80303ad1a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogs: {fileID: 11400000, guid: feb6b2c515b556544aff4a5e2359ad6c, type: 2}
+  m_queues:
+  - mDialogIndex: hunter_Lv0_needfood_a
+    mSpeaker: {fileID: 0}
+    italic: 1
+    mEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - mDialogIndex: hunter_Lv0_needfood_b
+    mSpeaker: {fileID: 0}
+    italic: 1
+    mEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1075563075252676998}
+          m_TargetAssemblyTypeName: DialogsManager, Assembly-CSharp
+          m_MethodName: StopDialog
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - mDialogIndex: witch_Lv0_curse_a
+    mSpeaker: {fileID: 0}
+    italic: 0
+    mEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - mDialogIndex: witch_Lv0_curse_b
+    mSpeaker: {fileID: 0}
+    italic: 0
+    mEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - mDialogIndex: boar_Lv0_curse_c
+    mSpeaker: {fileID: 0}
+    italic: 0
+    mEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - mDialogIndex: hunter_Lv0_rohr
+    mSpeaker: {fileID: 0}
+    italic: 1
+    mEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1075563075252676998}
+          m_TargetAssemblyTypeName: DialogsManager, Assembly-CSharp
+          m_MethodName: StopDialog
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  m_offset: {x: 0, y: 3, z: 0}

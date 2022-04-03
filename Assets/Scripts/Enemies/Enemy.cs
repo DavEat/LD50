@@ -26,4 +26,8 @@ public class Enemy : MonoBehaviour
 
         return Mathf.Abs(angle) < m_attackAngle;
     }
+
+    public virtual void Died()
+    {
+    }
 }

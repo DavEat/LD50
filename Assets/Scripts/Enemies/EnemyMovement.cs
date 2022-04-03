@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyMovement : Enemy
 {
-    [Range(-1, 15)]
+    [Range(-1, 50)]
     [SerializeField] float m_minRange = 1;
-    [Range(-1, 15)]
+    [Range(-1, 50)]
     [SerializeField] float m_maxRange = 1;
 
     Vector3 m_lastTargetPos;
@@ -17,10 +17,18 @@ public class EnemyMovement : Enemy
     void Start()
     {
         m_agent = GetComponent<NavMeshAgent>();
+
+        m_transform.rotation = Quaternion.LookRotation(GameManager.inst.player.position - m_transform.position, Vector3.up);
     }
 
     void FixedUpdate()
     {
+        if (m_states.death)
+            return;
+
+        if (DialogsManager.inst.InDialog)
+            return;
+
         if (!m_states.canMove)
             return;
 
@@ -52,5 +60,13 @@ public class EnemyMovement : Enemy
             if (!m_agent.SetDestination(targetPos))
                 m_agent.SetDestination(m_transform.position);
         }
+    }
+
+    public override void Died()
+    {
+        base.Died();
+
+        if (m_agent != null)
+            m_agent.enabled = false;
     }
 }

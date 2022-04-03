@@ -16,6 +16,9 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     void Update()
     {
+        if (DialogsManager.inst.InDialog)
+            return;
+
         if (Input.GetButtonDown(GameManager.inst.MeleeAttackButton_Strike) && m_coolDown_strike < Time.time)
         {
             //TODO prevent movement

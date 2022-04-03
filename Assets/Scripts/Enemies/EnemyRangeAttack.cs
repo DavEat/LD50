@@ -23,6 +23,12 @@ public class EnemyRangeAttack : Enemy
 
     void FixedUpdate()
     {
+        if (m_states.death)
+            return;
+
+        if (DialogsManager.inst.InDialog)
+            return;
+
         if (!m_states.c_canShot)
             return;
 

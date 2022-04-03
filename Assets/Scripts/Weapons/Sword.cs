@@ -24,6 +24,9 @@ public class Sword : MeleeWeapon
 
     void OnTriggerEnter(Collider other)
     {
+        if (DialogsManager.inst.InDialog)
+            return;
+
         //if (other.CompareTag("Player"))
         {
             LifePoints lps = other.GetComponent<LifePoints>();

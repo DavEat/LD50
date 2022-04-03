@@ -38,6 +38,9 @@ public class Spear : Weapon
 
     void FixedUpdate()
     {
+        if (DialogsManager.inst.InDialog)
+            return;
+
         if (!m_hittedTheGround)
             Fly();
         else

@@ -26,6 +26,9 @@ public class FollowTarget : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogsManager.inst.InDialog)
+            return;
+
         if (m_target != null)
         {
             float sqrMag = (m_transform.position - (m_target.position + m_offset)).sqrMagnitude;

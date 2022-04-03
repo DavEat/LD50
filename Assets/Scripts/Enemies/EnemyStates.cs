@@ -11,6 +11,13 @@ public class EnemyStates : MonoBehaviour
 
     public bool leftHanded = false;
 
+    public bool death;
+
+    public void SetDeath(bool value)
+    {
+        death = value;
+    }
+
     [Space(10)]
     [Header("Proccesing states")]
 
@@ -51,23 +58,26 @@ public class EnemyStates : MonoBehaviour
         canMelee = c_canMelee;
         canShot = c_canShot;
 
-        leftHanded = Random.Range(0, 1f) < .2f;
-        if (leftHanded)
+        if (m_filter != null)
         {
-            m_filter.transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-        }
+            leftHanded = Random.Range(0, 1f) < .2f;
+            if (leftHanded)
+            {
+                m_filter.transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            }
 
-        if (c_canMelee)
-        {
-            m_filter.mesh = m_idle;
-        }
-        else if (c_canShot)
-        {
-            m_filter.mesh = m_sword;
-        }
-        else
-        {
-            m_filter.mesh = m_throw;
-        }
+            if (c_canMelee)
+            {
+                m_filter.mesh = m_idle;
+            }
+            else if (c_canShot)
+            {
+                m_filter.mesh = m_sword;
+            }
+            else
+            {
+                m_filter.mesh = m_throw;
+            }
+        }        
     }
 }

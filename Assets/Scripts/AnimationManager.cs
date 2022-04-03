@@ -16,6 +16,13 @@ public class AnimationManager : MonoBehaviour
     static int m_strikeHash;
     static int m_turnHash;
 
+    static int m_deathHash;
+
+    public void SetAnimator(Animator anim)
+    {
+        m_animator = anim;
+    }
+
     void Start()
     {
         m_rigidbody = GetComponent<Rigidbody>();
@@ -28,6 +35,9 @@ public class AnimationManager : MonoBehaviour
             m_strikeHash = Animator.StringToHash("_Strike");
         if (m_turnHash == 0)
             m_turnHash = Animator.StringToHash("_Turn");
+
+        if (m_deathHash == 0)
+            m_deathHash = Animator.StringToHash("_Death");
     }
 
     void FixedUpdate()
@@ -49,5 +59,9 @@ public class AnimationManager : MonoBehaviour
     public void Turn()
     {
         m_animator.SetTrigger(m_turnHash);
+    }
+    public void Die()
+    {
+        m_animator.SetTrigger(m_deathHash);
     }
 }
