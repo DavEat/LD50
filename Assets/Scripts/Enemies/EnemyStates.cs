@@ -71,15 +71,15 @@ public class EnemyStates : MonoBehaviour
 
             if (c_canMelee)
             {
-                m_filter.mesh = m_idle;
+                m_filter.mesh = m_sword;
             }
             else if (c_canShot)
             {
-                m_filter.mesh = m_sword;
+                m_filter.mesh = m_throw;
             }
             else
             {
-                m_filter.mesh = m_throw;
+                m_filter.mesh = m_idle;
             }
         }        
     }

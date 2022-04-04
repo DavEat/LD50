@@ -36,7 +36,7 @@ public class GameOverScreen : MonoBehaviour
     {
         if (Input.GetButtonDown(GameManager.inst.NextDialogButton))
         {
-            GameManager.inst.GoToFirstScene();
+            GameManager.inst.GoToNextScene();
         }
     }
 }

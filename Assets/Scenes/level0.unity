@@ -4177,8 +4177,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.759434, g: 0.98319143, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.56181026, g: 0.76366466, b: 0.9528302, a: 1}
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4747,7 +4747,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &836173757
 PrefabInstance:
@@ -6259,7 +6259,7 @@ Transform:
   - {fileID: 1034436518}
   - {fileID: 960490253}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1074282198 stripped
 Transform:
@@ -9789,7 +9789,7 @@ RectTransform:
   - {fileID: 909024961}
   - {fileID: 1246306259}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12008,7 +12008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2432685713633614355, guid: 6111abe9ecb4a9042a27e10667e6067d, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2432685713633614355, guid: 6111abe9ecb4a9042a27e10667e6067d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12501,7 +12501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 489392490461110916, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 489392490461110916, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12570,11 +12570,11 @@ PrefabInstance:
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 5590207154094553336}
+      objectReference: {fileID: 243461857}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 243461857}
+      objectReference: {fileID: 5590207154094553336}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -12593,11 +12593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: StartDialog
+      value: SetBoarKilled
       objectReference: {fileID: 0}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: SetBoarKilled
+      value: StartDialog
       objectReference: {fileID: 0}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -12605,11 +12605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: DialogsManager, Assembly-CSharp
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: DialogsManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -12634,14 +12634,6 @@ PrefabInstance:
     - target: {fileID: 489392490461110970, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
       propertyPath: m_dieEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 489392490461110971, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
-      propertyPath: m_maxRange
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 489392490461110971, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
-      propertyPath: m_minRange
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb0f2a7996da2ec48a6b37b61c9842a5, type: 3}
@@ -13001,7 +12993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2959512093860350765, guid: 371c6ce176302b642aa558d2934a4f55, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2959512093860350765, guid: 371c6ce176302b642aa558d2934a4f55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13058,7 +13050,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3242974138150030813, guid: 9422634afc50eab498abd51adccac795, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3242974138150030813, guid: 9422634afc50eab498abd51adccac795, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13531,7 +13523,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - mDialogIndex: boar_Lv0_curse_c
+  - mDialogIndex: boar_Lv0_killed
     mSpeaker: {fileID: 1672212893}
     italic: 0
     mEvent:
@@ -13544,6 +13536,12 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - mDialogIndex: witch_Lv0_curse_b
+    mSpeaker: {fileID: 41771782}
+    italic: 0
+    mEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - mDialogIndex: witch_Lv0_curse_c
     mSpeaker: {fileID: 41771782}
     italic: 0
     mEvent:
@@ -13561,12 +13559,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-  - mDialogIndex: hunter_Lv0_rohr
-    mSpeaker: {fileID: 716623413}
-    italic: 0
-    mEvent:
-      m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 5590207154094553336}
           m_TargetAssemblyTypeName: DialogsManager, Assembly-CSharp
           m_MethodName: StopDialog
@@ -13577,11 +13569,11 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
-  - mDialogIndex: hunter_Lv0_rohr
+  - mDialogIndex: hunter_Lv0_witchkilled_a
     mSpeaker: {fileID: 716623413}
-    italic: 1
+    italic: 0
     mEvent:
       m_PersistentCalls:
         m_Calls:
@@ -13597,7 +13589,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - mDialogIndex: hunter_Lv0_witchkilled_a
+  - mDialogIndex: hunter_Lv0_witchkilled_b
     mSpeaker: {fileID: 716623413}
     italic: 1
     mEvent:
@@ -13835,11 +13827,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8523824832570747096, guid: 97792424a77554040bd8cafb0a3baa61, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 481.395
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 8523824832570747096, guid: 97792424a77554040bd8cafb0a3baa61, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8523824832570747096, guid: 97792424a77554040bd8cafb0a3baa61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13875,7 +13867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8523824832570747096, guid: 97792424a77554040bd8cafb0a3baa61, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -423.2651
+      value: -430.86966
       objectReference: {fileID: 0}
     - target: {fileID: 8523824832570747096, guid: 97792424a77554040bd8cafb0a3baa61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

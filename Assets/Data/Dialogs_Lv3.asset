@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8344659b0a471478162f3beff77dac, type: 3}
+  m_Name: Dialogs_Lv3
+  m_EditorClassIdentifier: 
+  mDialogs:
+  - id: hunter_Lv3_intro_a
+    text: 'Aaahrr ! Stupid body it doesn''t fits...
+
+      Pfff, I''m to ashamed
+      to wear it outside anyways...'
+  - id: hunter_Lv3_intro_b
+    text: 'Dingdong dingdong
+
+      Hum, who could taht be at this hour ?'
+  - id: hunter_Lv3_intro_c
+    text: 
+  - id: witch_Lv3_intro_d
+    text: 'Ahh switie you wern''t comming so I allow myself in.
+
+      I''m bringing
+      you some vegetables.'
+  - id: hunter_Lv3_intro_e
+    text: Hello Mom...
+  - id: witch_Lv3_intro_f
+    text: What is it that you are wearing ?
+  - id: hunter_Lv3_intro_g
+    text: Clothing...
+  - id: witch_Lv3_intro_h
+    text: That I know, but you should not be wearing those, it will make your life
+      difficult.
+  - id: hunter_Lv3_intro_i
+    text: Yes life is hard Mother...
+  - id: witch_Lv3_intro_j
+    text: Oh, I'm sorry sweety, you know it's hard for me to understand your choices
+      I promisse I'll try harder
+  - id: witch_Lv3_intro_k
+    text: 'But I have to go now
+
+      Bye !
+
+      Love you sweety'
+  - id: hunter_Lv3_intro_m
+    text: I wish I had a choice
+  - id: theend_a
+    text: The end
+  - id: theend_b
+    text: Thank you for playing ! <3

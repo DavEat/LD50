@@ -53,5 +53,5 @@ MonoBehaviour:
   MeleeAttackButton_Strike: Fire1
   MeleeAttackButton_Turn: Fire2
   NextDialogButton: Fire1
-  numverOfScene: 3
+  numverOfScene: 4
   m_gameOver: {fileID: 0}

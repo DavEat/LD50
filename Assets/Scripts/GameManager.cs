@@ -31,11 +31,11 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] GameOverScreen m_gameOver;
 
-    public void GoToFirstScene()
+    public void GoToNextScene()
     {
         SceneManager.LoadScene(m_nextSceneIndex);
     }
-
+    
     public void Check_GoToNextScene()
     {
         DialogsManager.inst.m_inDialog = true;
@@ -47,12 +47,12 @@ public class GameManager : Singleton<GameManager>
         if (!boarKilled)
         {
             Debug.Log("You didn't found food for you and your wife, already weak you got sike and died");
-            index = 0;
+            index = SceneManager.GetActiveScene().buildIndex;
         }
         else if (!witchKilled)
         {
             Debug.Log("You did not found a cure for your affliction, while returning home in the first light of the day you changed into stone");
-            index = 0;
+            index = SceneManager.GetActiveScene().buildIndex;
         }
 
         m_nextSceneIndex = index;

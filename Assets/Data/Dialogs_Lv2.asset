@@ -16,20 +16,14 @@ MonoBehaviour:
   - id: hunter_Lv1_intro_a
     text: "What... Again... No...\nMy body is changing...\t"
   - id: hunter_Lv1_intro_b
-    text: 'I don''t know why but,
-
-      I need to return in the wood...'
+    text: I don't have a better idea, I need to return in the wood...
   - id: hunter_Lv1_intro_c
-    text: 'Here I''m... and gnomes too
+    text: 'Here I''m... and gnomes too...
 
       I need to go deeper'
   - id: hunter_Lv1_intro_d
-    text: 'And those gnomes better
-
-      not be in my way'
+    text: And those gnomes better not be in my way
   - id: hunter_Lv1_witchkilled_a
-    text: 'human again, I hope
-
-      it''s the last time'
+    text: human again, I hope it's the last time
   - id: hunter_Lv1_witchkilled_b
     text: It's time to go home

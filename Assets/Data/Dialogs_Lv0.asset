@@ -14,32 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDialogs:
   - id: witch_Lv0_curse_a
-    text: 'Ahh...
+    text: 'What have you done !
 
-      What have you done !'
+
+      You don''t understand do you ?'
   - id: witch_Lv0_curse_b
-    text: 'You will be curse for your mindless action,
+    text: He is the Sacred Boar of this forest. You will pay for what you have done
+      !
+  - id: witch_Lv0_curse_c
+    text: 'Hooow !
 
-      and sufer the concequence,
-      it is ineluctable'
-  - id: boar_Lv0_curse_c
-    text: squiiik
-  - id: hunter_Lv0_rohr
-    text: aaaaahhhh greeee grooo
+      And what kind of monster are you ?'
+  - id: boar_Lv0_killed
+    text: squiiiiiiick
   - id: hunter_Lv0_needfood_a
-    text: 'The moon is almost full.
-
-      I''m luky, I should find a prey with ease'
+    text: Aaah ! It's not perfect but I'm lucky the moon is not full yet, hopefully
+      they wont see a thing.
   - id: hunter_Lv0_needfood_b
-    text: 'And... oh ! A big boar
-
-      We will eat for days !'
+    text: I wasn't hunting a boar but I'm hungry, let try to get close.
   - id: hunter_Lv0_witchkilled_a
-    text: 'Oh I''m human again, is it because I have
-
-      kill the spell caster
-      ?
-
-'
+    text: ( out of breath )... I'm not a monster !
+  - id: hunter_Lv0_witchkilled_b
+    text: Pfiuu, hitting her give me my humanity back
   - id: hunter_Lv0_headhome_a
-    text: Any ways it's time to head home.
+    text: I should head home...

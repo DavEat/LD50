@@ -146,8 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_attackAngle: 180
   m_rotationSpeed: 5
-  m_minRange: 7
-  m_maxRange: 15
+  m_minRange: 15
+  m_maxRange: 25
   m_detectionRange: 25
 --- !u!114 &489392490461110970
 MonoBehaviour:

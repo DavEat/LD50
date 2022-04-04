@@ -49,7 +49,7 @@ public class DialogsManager : Singleton<DialogsManager>
     {
         if (m_dialogs != null)
         {
-            if (m_dialogIndex >= m_dialogs.mDialogs.Length)
+            if (m_dialogIndex >= m_queues.Length)
                 m_dialogIndex = 0;
 
             m_previousQueue = m_queues[m_dialogIndex];

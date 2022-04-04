@@ -16,9 +16,7 @@ MonoBehaviour:
   - id: hunter_Lv1_intro_a
     text: "What...\nMy body, it's changing...\t"
   - id: hunter_Lv1_intro_b
-    text: 'It''s not good it''s not corresponding to
-
-      how I see myself'
+    text: It's not good it's not corresponding to how I see myself
   - id: hunter_Lv1_intro_c
     text: I need to return in the wood...
   - id: hunter_Lv1_intro_d
@@ -26,15 +24,14 @@ MonoBehaviour:
 
       But what can I do ?'
   - id: hunter_Lv1_intro_e
-    text: 'Last time out of rage I kill
+    text: 'Last time out of rage I hit
 
-      something... or someone'
+      something... rather someone'
   - id: hunter_Lv1_intro_f
-    text: 'euh ! what is it... I smell something
-
-      teasty... deeper in the forest'
+    text: euh ! what a strange filling, I'm sure I'll find what I'm looking for deeper
+      in the forest
   - id: hunter_Lv1_witchkilled_a
-    text: 'euh oook.. killing that person
+    text: 'euh oook.. punching that person
 
       give me my humanity back'
   - id: hunter_Lv1_witchkilled_b
