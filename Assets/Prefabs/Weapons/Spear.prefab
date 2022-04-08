@@ -96,8 +96,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d6e7ecef67889489c7c8b65c598e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_damage: 1
   angle: 3
   m_dstOffset: 0
-  m_speed: 1
+  m_speed: 2
+  m_normalDst: 6
   m_traveledDst: 0
   m_startYVel: 0
+  m_layer:
+    serializedVersion: 2
+    m_Bits: 1

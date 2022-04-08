@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 791302692}
   m_LocalRotation: {x: 0.25676116, y: -0, z: -0, w: 0.9664749}
   m_LocalPosition: {x: 0.398, y: 1.179, z: 0.271}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1289747750}
@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 1289747753}
   - component: {fileID: 1289747752}
   - component: {fileID: 1289747751}
+  - component: {fileID: 1147210550}
   m_Layer: 0
   m_Name: model_troll
   m_TagString: Untagged
@@ -334,6 +335,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1147210550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289747749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ad07dbf73800349b48d4e6d31612ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_manager: {fileID: 0}
 --- !u!1 &4015931700301657268
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +360,7 @@ GameObject:
   - component: {fileID: 4015931700301657256}
   - component: {fileID: 4015931700301657259}
   - component: {fileID: 4015931700301657257}
+  - component: {fileID: 492761534}
   m_Layer: 0
   m_Name: model_hunter
   m_TagString: Untagged
@@ -440,6 +455,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &492761534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015931700301657268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ad07dbf73800349b48d4e6d31612ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_manager: {fileID: 0}
 --- !u!1 &4015931700997583950
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,10 +480,11 @@ GameObject:
   - component: {fileID: 4015931700997583949}
   - component: {fileID: 4015931700997583948}
   - component: {fileID: 4015931700997583938}
+  - component: {fileID: 2436109998938294999}
   - component: {fileID: 4015931700997583936}
-  - component: {fileID: 4015931700997583939}
-  - component: {fileID: 716623419}
   - component: {fileID: 716623420}
+  - component: {fileID: 716623419}
+  - component: {fileID: 4015931700997583939}
   - component: {fileID: 1779319821}
   - component: {fileID: 6462515781543446213}
   m_Layer: 0
@@ -534,6 +563,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2436109998938294999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015931700997583950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e1c74c7be6bb745a1e03c23f72d81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mCanMove: 1
+  mCanAttack: 1
 --- !u!114 &4015931700997583936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,8 +589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5cb2157539f4b4c8a13d9109db3563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 6.5
---- !u!114 &4015931700997583939
+  m_speed: 5
+--- !u!114 &716623420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -556,11 +599,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4015931700997583950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f693e972daa8904cb91ad95e072b4ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 0af0e81b2d27d8749b42939e4de7676c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxVelocityMag: 5
-  m_getRb: 1
+  m_weapon: {fileID: 0}
+  m_am: {fileID: 4015931700997583939}
+  m_rb: {fileID: 0}
+  m_strikeForceMul: 1000
+  m_canStrike: 1
+  m_canTurn: 1
 --- !u!114 &716623419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +658,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 64004e4106416b84590b801d3c4471c5, type: 3}
   m_clips_die:
   - {fileID: 8300000, guid: 2be13e726b3aa144ea27be2b75f5d2e1, type: 3}
---- !u!114 &716623420
+--- !u!114 &4015931700997583939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -620,13 +667,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 4015931700997583950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0af0e81b2d27d8749b42939e4de7676c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f693e972daa8904cb91ad95e072b4ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_weapon: {fileID: 0}
-  m_am: {fileID: 4015931700997583939}
-  dm_coolDown_strike: 0.7
-  dm_coolDown_turn: 1
+  m_maxVelocityMag: 4.5
+  m_getRb: 1
+  m_animatioCompletedEvents:
+  - m_animationName: Strike
+    m_event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 716623420}
+          m_TargetAssemblyTypeName: PlayerMeleeAttack, Assembly-CSharp
+          m_MethodName: SetCanStrike
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - m_animationName: Turn
+    m_event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 716623420}
+          m_TargetAssemblyTypeName: PlayerMeleeAttack, Assembly-CSharp
+          m_MethodName: SetCanTurn
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!114 &1779319821
 MonoBehaviour:
   m_ObjectHideFlags: 0

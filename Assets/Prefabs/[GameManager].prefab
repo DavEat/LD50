@@ -50,8 +50,11 @@ MonoBehaviour:
   killedByGnome: 0
   witchKilled: 0
   PlayerTag: Player
-  MeleeAttackButton_Strike: Fire1
-  MeleeAttackButton_Turn: Fire2
+  MeleeAttackButton_Strike: Fire2
+  MeleeAttackButton_Turn: Fire1
   NextDialogButton: Fire1
-  numverOfScene: 4
+  m_nextSceneIndex: 0
+  m_startSceneIndex: 1
+  m_numverOfScene: 4
   m_gameOver: {fileID: 0}
+  m_stopMusicOnStart: 0

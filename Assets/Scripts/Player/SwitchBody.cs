@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchBody : MonoBehaviour
+public class SwitchBody : Player
 {
-
-
     [SerializeField] AnimationManager m_animManager;
     [SerializeField] Animator m_hunter;
     [SerializeField] Animator m_troll;
@@ -31,6 +29,7 @@ public class SwitchBody : MonoBehaviour
         }
 
         SoundManager.PlaySound(m_source, m_clips, true);
+        m_status.ResetValue();
     }
 
     private void Update()

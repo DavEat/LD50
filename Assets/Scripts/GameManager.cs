@@ -26,10 +26,24 @@ public class GameManager : Singleton<GameManager>
 
     public string NextDialogButton = "Fire1";
 
-    int m_nextSceneIndex;
-    [SerializeField] int numverOfScene = 2;
+    [SerializeField] int m_nextSceneIndex;
+    [SerializeField] int m_startSceneIndex = 1;
+    [SerializeField] int m_numverOfScene = 4; //minus init
 
     [SerializeField] GameOverScreen m_gameOver;
+
+    [SerializeField] bool m_stopMusicOnStart = false;
+    void Start()
+    {
+        if (m_stopMusicOnStart)
+        {
+            SoundManager.inst?.StopMusic();
+        }
+        else
+        {
+            SoundManager.inst?.StartMusic();
+        }
+    }
 
     public void GoToNextScene()
     {
@@ -41,9 +55,14 @@ public class GameManager : Singleton<GameManager>
         DialogsManager.inst.m_inDialog = true;
 
         int index = SceneManager.GetActiveScene().buildIndex + 1;
-        if (index >= numverOfScene)
-            index = 0;
+        if (index >= m_numverOfScene + m_startSceneIndex)
+            index = m_startSceneIndex;
 
+        if (killedByGnome)
+        {
+            Debug.Log("Killed by gnomes");
+            index = SceneManager.GetActiveScene().buildIndex;
+        }
         if (!boarKilled)
         {
             Debug.Log("You didn't found food for you and your wife, already weak you got sike and died");

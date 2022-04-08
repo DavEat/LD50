@@ -9,6 +9,7 @@ public class Spear : Weapon
     [SerializeField] float m_dstOffset = 1.5f;
     [SerializeField] float m_speed = .3f;
 
+    [SerializeField] float m_normalDst = 6;
     [SerializeField] float m_traveledDst;
     [SerializeField] float m_startYVel;
 
@@ -22,6 +23,8 @@ public class Spear : Weapon
 
     Transform m_transform = null;
     Vector3 m_velocity;
+    float m_speedMul;
+   
 
     public void Init(float distance, Transform parent)
     {
@@ -31,6 +34,9 @@ public class Spear : Weapon
         m_transform.parent = parent;
 
         float dst = distance + m_dstOffset;
+        m_speedMul = 1 - Mathf.Clamp01(Mathf.Abs(dst) / m_normalDst);
+        if (m_speedMul < .5f)
+            m_speedMul = .5f;
         m_velocity = Quaternion.Euler(0, m_transform.eulerAngles.y, 0) * new Vector3(0, dst * angle - m_transform.position.y, dst);
 
         m_startYVel = m_velocity.y;
@@ -66,7 +72,7 @@ public class Spear : Weapon
         float percent = m_traveledDst / m_velocity.z;
         m_velocity.y = m_startYVel * (-percent + .5f);
 
-        Vector3 vel = m_velocity * Time.fixedDeltaTime * m_speed;
+        Vector3 vel = m_velocity * Time.fixedDeltaTime * m_speed * m_speedMul;
 
         m_transform.position += vel;
         m_traveledDst += vel.z;

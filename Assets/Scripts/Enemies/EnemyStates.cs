@@ -24,27 +24,28 @@ public class EnemyStates : MonoBehaviour
     public bool moving = false;
     public bool canMove
     {
-        get => c_canMove && _canMove;
-        set => _canMove = value;
+        get => c_canMove && m_canMove;
+        set => m_canMove = value;
     }
-    [SerializeField] bool _canMove = true;
+    [SerializeField] bool m_canMove = true;
     
     public bool canMelee
     {
-        get => c_canMelee && _canMelee;
-        set => _canMelee = value;
+        get => c_canMelee && m_canMelee;
+        set => m_canMelee = value;
     }
-    [SerializeField] bool _canMelee = false;
+    [SerializeField] bool m_canMelee = false;
 
 
     public bool canShot
     {
-        get => c_canShot && _canShot;
-        set => _canShot = value;
+        get => c_canShot && m_canShot;
+        set => m_canShot = value;
     }
-    [SerializeField] bool _canShot = false;
+    [SerializeField] bool m_canShot = false;
 
 
+    public bool mAtRange = false;
     public bool mTargetDetected = false;
 
     [Space(10)]

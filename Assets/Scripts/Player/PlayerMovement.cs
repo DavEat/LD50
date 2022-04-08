@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Player
 {
     [SerializeField] float m_speed = 1;
     //[SerializeField] float m_accelerationMul = 1;
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (DialogsManager.inst.InDialog)
+        if (DialogsManager.inst.InDialog || !m_status.mCanMove)
             return;
 
         if (Mathf.Abs(inputX) > .1f || Mathf.Abs(inputZ) > .1f)

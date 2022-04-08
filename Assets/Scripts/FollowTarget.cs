@@ -27,7 +27,9 @@ public class FollowTarget : MonoBehaviour
     void FixedUpdate()
     {
         if (DialogsManager.inst.InDialog)
+        {            
             return;
+        }
 
         if (m_target != null)
         {
@@ -44,5 +46,10 @@ public class FollowTarget : MonoBehaviour
                     m_transform.position = Vector3.LerpUnclamped(m_transform.position, m_target.position + m_offset, Time.deltaTime * m_speed);
             }
         }
+    }
+
+    public void CenterCamera(Transform t)
+    {
+        m_transform.position = t.position + m_offset;
     }
 }

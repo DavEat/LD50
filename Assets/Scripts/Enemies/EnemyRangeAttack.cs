@@ -32,6 +32,9 @@ public class EnemyRangeAttack : Enemy
         if (!m_states.c_canShot)
             return;
 
+        if (!m_states.mAtRange)
+            return;
+
         if (m_states.moving)
             return;
 

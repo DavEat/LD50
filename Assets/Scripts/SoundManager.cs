@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
+    [SerializeField] AudioSource m_musicSource;
     [SerializeField] AudioSource m_source;
     [SerializeField] AudioClip[] m_clips_dialog;
+
+    public void StartMusic()
+    {
+        m_musicSource?.Play();
+    }
+    public void StopMusic()
+    {
+        m_musicSource?.Stop();
+    }
 
     public static void PlaySound(AudioSource source, AudioClip[] clips, bool skip)
     {

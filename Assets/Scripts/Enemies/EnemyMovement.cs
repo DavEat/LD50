@@ -32,7 +32,8 @@ public class EnemyMovement : Enemy
 
         if (DialogsManager.inst.InDialog)
         {
-            m_agent.isStopped = true;
+            if (m_agent.isActiveAndEnabled && m_agent.isOnNavMesh)
+                m_agent.isStopped = true;
             return;
         }
         else m_agent.isStopped = false;
@@ -58,6 +59,7 @@ public class EnemyMovement : Enemy
         if (sqr > m_maxRange * m_maxRange)
         {
             targetPos = playerPos + direction.normalized * m_maxRange;
+            m_states.mAtRange = false;
         }
         else if (sqr < m_minRange * m_minRange)
         {
@@ -65,6 +67,7 @@ public class EnemyMovement : Enemy
         }
         else
         {
+            m_states.mAtRange = true; 
             targetPos = m_transform.position;
         }
 
