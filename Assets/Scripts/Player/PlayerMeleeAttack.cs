@@ -49,7 +49,7 @@ public class PlayerMeleeAttack : Player
             //TODO prevent movement
             //-m_coolDown_turn = dm_coolDown_turn + Time.time;
             m_rb.velocity = Vector3.zero;
-            m_status.mCanMove = false;
+            //m_status.mCanMove = false;
 
             m_canTurn = false;
             m_status.mCanAttack = false;
